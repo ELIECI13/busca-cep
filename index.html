@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Consulta de endereços brasileiros por CEP usando a API ViaCEP.">
+  <title>BuscaCEP | Consulta de endereço</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <header class="topo">
+      <div><span class="tag">Projeto Front-end</span><h1>BuscaCEP</h1><p>Consulte um endereço brasileiro a partir do CEP.</p></div>
+      <button id="tema" class="botao-icone" type="button" aria-label="Alternar tema">◐</button>
+    </header>
+
+    <section class="card busca">
+      <form id="formBusca">
+        <label for="cep">CEP</label>
+        <div class="linha-busca">
+          <input id="cep" type="text" inputmode="numeric" maxlength="9" autocomplete="postal-code" placeholder="00000-000" aria-describedby="mensagem">
+          <button class="primario" type="submit">Buscar endereço</button>
+        </div>
+        <p id="mensagem" class="mensagem">Digite os 8 números do CEP.</p>
+      </form>
+    </section>
+
+    <section id="resultado" class="card resultado" aria-live="polite">
+      <div class="resultado-topo">
+        <div><span class="tag">Endereço encontrado</span><h2 id="cepResultado">—</h2></div>
+        <button id="copiar" class="secundario" type="button">Copiar endereço</button>
+      </div>
+      <div class="dados">
+        <div class="dado grande"><span>Logradouro</span><strong id="logradouro">—</strong></div>
+        <div class="dado"><span>Bairro</span><strong id="bairro">—</strong></div>
+        <div class="dado"><span>Cidade</span><strong id="cidade">—</strong></div>
+        <div class="dado"><span>Estado</span><strong id="estado">—</strong></div>
+        <div class="dado"><span>DDD</span><strong id="ddd">—</strong></div>
+        <div class="dado"><span>IBGE</span><strong id="ibge">—</strong></div>
+      </div>
+    </section>
+
+    <section class="card historico-card">
+      <div class="resultado-topo"><div><span class="tag">Neste navegador</span><h2>Últimas consultas</h2></div><button id="limparHistorico" class="texto-botao" type="button">Limpar</button></div>
+      <p id="historicoVazio">Os CEPs pesquisados aparecerão aqui.</p>
+      <div id="historico" class="historico"></div>
+    </section>
+
+    <footer><p>Projeto desenvolvido para praticar consumo de API REST com JavaScript. Dados consultados no ViaCEP.</p></footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

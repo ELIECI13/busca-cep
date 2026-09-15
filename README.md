@@ -2,6 +2,8 @@
 
 Aplicação front-end para consultar endereços brasileiros a partir de um CEP.
 
+**Demo online:** https://elieci13.github.io/busca-cep/
+
 Criei este projeto para praticar consumo de API REST com JavaScript sem utilizar framework. A consulta é feita no ViaCEP e a interface trata CEP inválido, endereço não encontrado e falhas de conexão.
 
 ## Recursos
@@ -22,7 +24,7 @@ HTML5, CSS3 e JavaScript. Os dados de endereço são fornecidos pelo webservice 
 
 ## Como executar
 
-Não há dependências para instalar. Basta abrir o arquivo `index.html` no navegador ou publicar os arquivos em um serviço de páginas estáticas.
+A forma mais rápida é acessar a demo online. Também é possível baixar os arquivos e abrir `index.html` no navegador. Não há dependências para instalar.
 
 ## O que pratiquei
 
